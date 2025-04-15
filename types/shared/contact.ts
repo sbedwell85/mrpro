@@ -1,4 +1,5 @@
 export interface IContact {
+  _id?: string;
   first: string;
   last: string;
   title: string;
@@ -7,3 +8,5 @@ export interface IContact {
   email: string;
   active?: boolean;
 }
+
+//SyntaxError: The requested module '../shared/contact.ts' does not provide an export named 'IContact'

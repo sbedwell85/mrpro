@@ -1,4 +1,4 @@
-import { Schema, model, models } from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 import { ICustomer } from "../../types/customer/customer.ts";
 import { ContactSchema } from "../shared/Contact.ts";
 import { LocationSchema } from "../shared/Location.ts";
@@ -11,7 +11,7 @@ const CustomerSchema = new Schema<ICustomer>(
     contacts: [ContactSchema],
     locations: [LocationSchema],
   },
-  { timestamps: true }
+  { timestamps: true, versionKey: false }
 );
 
-export default models.Customer || model<ICustomer>("Customer", CustomerSchema);
+export default mongoose.models.Customer || model<ICustomer>("Customer", CustomerSchema);

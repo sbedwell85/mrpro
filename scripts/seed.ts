@@ -1,3 +1,4 @@
+import "dotenv/config"; // Load .env file
 // This script is used to seed the database with fake data
 import seedCustomers from "../db/data/customer_seeder.ts";
 

@@ -10,5 +10,5 @@ export const LocationSchema = new Schema(
     zip: { type: String, required: true },
     active: { type: Boolean, default: true },
   },
-  { _id: false }
+  {} // Allow Mongoose to auto-generate _id
 );

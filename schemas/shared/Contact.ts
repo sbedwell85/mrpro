@@ -10,5 +10,5 @@ export const ContactSchema = new Schema(
     email: { type: String },
     active: { type: Boolean, default: true },
   },
-  { _id: false }
+  {} // Allow Mongoose to auto-generate _id
 );

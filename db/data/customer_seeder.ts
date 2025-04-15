@@ -90,20 +90,6 @@ async function seedCustomers(count = 10) {
   }
 }
 
-// Execute when run directly
-if (require.main === module) {
-  // Get the number of customers to seed from the command line args or default to 10
-  const count = process.argv[2] ? parseInt(process.argv[2], 10) : 10;
-
-  seedCustomers(count)
-    .then(() => {
-      console.log("Seeding completed successfully!");
-      process.exit(0);
-    })
-    .catch((error) => {
-      console.error("Seeding failed:", error);
-      process.exit(1);
-    });
-}
+// This block is removed as scripts/seed.ts is the main entry point
 
 export default seedCustomers;
