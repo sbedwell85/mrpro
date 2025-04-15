@@ -1,6 +1,6 @@
 import { Types } from "mongoose";
-import { IContact } from "../shared/contact";
-import { ILocation } from "../shared/location";
+import { IContact } from "../shared/contact.ts";
+import { ILocation } from "../shared/location.ts";
 
 export interface ICustomer {
   _id?: Types.ObjectId;

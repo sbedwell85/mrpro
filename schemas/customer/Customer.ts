@@ -1,7 +1,7 @@
 import { Schema, model, models } from "mongoose";
-import { ICustomer } from "../../types/customer/customer";
-import { ContactSchema } from "../shared/Contact";
-import { LocationSchema } from "../shared/Location";
+import { ICustomer } from "../../types/customer/customer.ts";
+import { ContactSchema } from "../shared/Contact.ts";
+import { LocationSchema } from "../shared/Location.ts";
 
 const CustomerSchema = new Schema<ICustomer>(
   {
